@@ -1,8 +1,8 @@
 {
-  "name": "react-native-get-random-values",
+  "name": "react-native-get-random-values-expo",
   "version": "1.8.0",
   "license": "MIT",
-  "repository": "LinusU/react-native-get-random-values",
+  "repository": "bitzr01/react-native-get-random-values-expo",
   "dependencies": {
     "fast-base64-decode": "^1.0.0",
     "expo-crypto": "^12.2.2"
