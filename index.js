@@ -1,3 +1,4 @@
+import * as Crypto from 'expo-crypto'
 const base64Decode = require('fast-base64-decode')
 const { NativeModules } = require('react-native')
 
@@ -31,7 +32,7 @@ function getRandomBase64 (byteLength) {
     return NativeModules.ExpoRandom.getRandomBase64String(byteLength)
   } else if (global.ExpoModules) {
     // Expo SDK 45+
-    return global.ExpoModules.ExpoRandom.getRandomBase64String(byteLength);
+    return Crypto.getRandomBytes(byteLength).toString('base64')
   } else {
     throw new Error('Native module not found')
   }
